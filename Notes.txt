@@ -1,0 +1,42 @@
+1/4/2014
+--------------------
+Comparison operators:
+>, <, ==, !=, >=, <=
+
+Python 2: print "Hello World"
+print("Hello World")
+
+n = 5
+if n > 5:
+    print("Greater than 5")
+elif n == 5:
+    print("Equal to 5")
+else:
+    print("Less than 5")
+
+Python 2: a = raw_input("Enter a string: ")
+str = input("Enter a string: ")
+
+int("85") -> 85
+int("8.5") -> invalid literal for int() with base 10: '8.5'
+float("8.5") -> 8.5
+int(float("8.5")) -> 8
+
+report = "{last}, {first}\n\
+Test 1: {test1}\n\
+Test 2: {test2}\n\
+Test 3: {test3}\n\
+============\n\
+Average: {average}"
+print(report.format(last=last, first=first,
+    test1=test1, test2=test2, test3=test3,
+    average=average))
+
+colors = ['red', 'white', 'blue']
+colors[0] -> 'red'
+colors[len(colors)-1]='silver' -> ['red', 'white', 'silver']
+colors[-1] -> 'silver'
+colors[-len(colors)] -> 'red'
+colors.append('white') -> ['red', 'white', 'silver', 'white']
+colors.count('white') -> 2
+colors.index('white') -> 1
