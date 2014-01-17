@@ -31,6 +31,10 @@ Average: {average}"
 print(report.format(last=last, first=first,
     test1=test1, test2=test2, test3=test3,
     average=average))
+	
+name="Kevin"
+age=43
+print("Name: {name}\nAge: {age}".format(name=name, age=age))
 
 colors = ['red', 'white', 'blue']
 colors[0] -> 'red'
@@ -40,3 +44,420 @@ colors[-len(colors)] -> 'red'
 colors.append('white') -> ['red', 'white', 'silver', 'white']
 colors.count('white') -> 2
 colors.index('white') -> 1
+"red" in colors -> True
+more_colors =['green', 'yellow']
+colors.extend(more_colors) -> ['red', 'white', 'silver', 'white', 'green', 'yellow']
+colors.remove('white') -> ['red', 'silver', 'white', 'green', 'yellow']
+colors.sort() -> ['green', 'red', 'silver', 'white', 'yellow']
+colors.reverse() -> ['yellow', 'white', 'silver', 'red', 'green']
+list1 = [1, 2]; list2 = [3, 4]
+list1 + list2 -> [1, 2, 3, 4]
+list1 * 3 -> [1, 2, 1, 2, 1, 2]
+list1=[1,2]; list2=[2,1]; list1==list2 -> False
+list1=[1,2]; list2=[1,2]; list1==list2 -> True
+
+range(10) -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]			# in Python 2
+range(1,5) -> [1, 2, 3, 4]							# in Python 2
+range(0,10,2) -> [0, 2, 4, 6, 8]					# in Python 2
+range(5,0,-1) -> [5, 4, 3, 2, 1]					# in Python 2
+
+for i in range(4):
+	print(i)
+>>>>>>>>>
+0
+1
+2
+3
+
+for i in range(1, 7, 2):
+	if i == 3:
+		print("My favorite!")
+		continue
+	print("number: ",i)
+>>>>>>>
+number:  1
+My favorite!
+number:  5
+
+for i in range(1, 7, 2):
+	if i == 3:
+		print("My favorite!")
+		break
+	print("number: ",i)
+>>>>>>>
+number:  1
+My favorite!
+
+----------
+def prime_factors(n):
+    """Returns all the prime factors of a positive integer"""
+    factors = []
+    d = 2
+    while n > 1:
+        while n % d == 0:
+            factors.append(d)
+            n /= d
+        d = d + 1
+
+    return factors
+
+pfs = prime_factors(1000)
+largest_prime_factor = max(pfs)
+----------
+
+----------
+age = ""
+while not age.isdigit():
+	age=input("Age: ")
+----------
+
+Groups of individual statements making up a single code block are called suites in Python.
+Compound or complex statements, such as if, while, def, and class, are those which require a header line and a suite.
+Header lines begin the statement (with the keyword) and terminate with a colon ( : ) and are followed by one or more lines which make up the suite.
+
+----------
+fruits = ['banana', 'apple',  'mango']
+for index in range(len(fruits)):
+   print 'Current fruit :', fruits[index]
+----------
+
+----------
+for letter in 'Python': 
+   if letter == 'h':
+      pass
+      print('This is pass block')
+   print('Current Letter :', letter)
+----------
+
+----------
+def return_two():
+	return 5, "five"
+
+return_two() -> (5, 'five')
+a, b = return_two() -> a = 5, b = 'five'
+----------
+
+----------
+if __name__ == '__main__':
+	main()
+----------
+
+----------
+class Test(object):
+	def __init__(self, text):
+		self.text = text
+	
+	def __str__(self):
+		return self.text
+		
+t = Test("Hello world")
+print(t)
+>>>>>>>>
+Hello world
+----------
+
+----------
+class Book(object):
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+        
+    def __str__(self):
+        template = "{title} by {author}"
+        return template.format(
+            title=self.title,
+            author=self.author)
+            
+my_book = Book(title="A Dirty Job", author="Moore")
+print(my_book)
+>>>>>>>
+A Dirty Job by Moore        
+----------
+
+----------
+class A(object):
+    def __init__(self, text, num):
+        self.text = text
+        self.num = num
+        
+    def __eq__(self, other):
+        if self.text == other.text:
+            return True
+        else:
+            return False
+            
+a = A("hi", 5)
+b = A("hi", 5)
+a == b  -> True
+b.num = 6
+a == b  -> True
+b.text = "bye"
+a == b  -> False            
+
+__gt__  Greater than
+__lt__  Less than
+__gte__ Greater than or equal to
+__lte__ Less than or equal to
+__ne__  Not equal to 
+----------
+
+----------
+from random import *
+d = {}
+for i in range(1000):
+    n = randint(0,10)
+    if n in d:
+        d[n] += 1
+    else:
+        d[n] = 1
+
+for n in d:
+    print(n, "-", d[n])
+----------
+
+----------
+from random import choice
+snacks = ["apple", "candy", "pop corn"]
+print(choice(snacks))
+print(choice(snacks))
+print(choice(snacks))
+----------
+
+----------
+f=open("test.txt")
+lines=f.readlines()
+print(lines)
+----------
+
+1/11/2014   Saturday
+----------------------
+>>> "Hi %s I have %d donuts" % ('Alice',42)
+'Hi Alice I have 42 donuts'
+>>> "Hi %s I have %d donuts" % ('Alice','dd')
+Traceback (most recent call last):
+  File "<pyshell#332>", line 1, in <module>
+    "Hi %s I have %d donuts" % ('Alice','dd')
+TypeError: %d format: a number is required, not str
+----------------------
+>>> a='Erica'
+>>> a[-1:-3]
+''
+>>> a[-3:-1]
+'ic'
+>>> 
+----------------------
+>>> a='aa'
+>>> a[2]
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    a[2]
+IndexError: string index out of range
+>>> a[2:]
+''
+----------------------
+>>> a='abcd'
+>>> a[:3]           # Not including position 3
+'abc'
+>>> a_front = a[:len(a)/2-1]
+>>> a_front
+'a'
+>>> a_front = a[:len(a)/2]
+>>> a_front
+'ab'
+>>> a_back = a[len(a)/2+1:]
+>>> a_back
+'d'
+>>> a_back = a[len(a)/2:]
+>>> a_back
+'cd'
+----------------------
+>>> a=[1,2,3]
+>>> b=a
+>>> b
+[1, 2, 3]
+>>> a[0]=15
+>>> b
+[15, 2, 3]
+>>> b=a[:]      # making a copy
+>>> b
+[15, 2, 3]
+>>> a[0]=100
+>>> b
+[15, 2, 3]
+>>> ----------------------
+>>> a=[1,2,3]
+>>> a
+[1, 2, 3]
+>>> a.pop(0)
+1
+>>> a
+[2, 3]
+>>> a.append(8,3)
+Traceback (most recent call last):
+  File "<pyshell#36>", line 1, in <module>
+    a.append(8,3)
+TypeError: append() takes exactly one argument (2 given)
+>>> a.append(8)
+>>> a
+[2, 3, 8]
+>>> a.pop(2)
+8
+>>> a
+[2, 3]
+>>> a.append(7)
+>>> a
+[2, 3, 7]
+>>> del a[2]
+>>> a
+[2, 3]
+----------------------
+>>> a=[1,2,3,['a','b',3]]
+>>> b=a
+>>> b
+[1, 2, 3, ['a', 'b', 3]]
+>>> a[3][1]=3
+>>> a
+[1, 2, 3, ['a', 3, 3]]
+>>> b
+[1, 2, 3, ['a', 3, 3]]
+----------------------
+>>> a=[1,2,3,4]
+>>> a.append(-1)
+>>> a
+[1, 2, 3, 4, -1]
+>>> a.pop(3)
+4
+>>> a
+[1, 2, 3, -1]
+>>> del a[2]
+>>> a
+[1, 2, -1]
+----------------------
+>>> c
+[1, 2, 3, ['a', 'kevin', 3]]
+>>> sorted(c,reverse=True)
+[['a', 'kevin', 3], 3, 2, 1]
+>>> a=['ccc','aaaa','d','bb']
+>>> sorted(a, key=len)
+['d', 'bb', 'ccc', 'aaaa']
+>>> a[0]='cccz'
+>>> a
+['cccz', 'aaaa', 'd', 'bb']
+>>> def last_char(s): return s[-1]
+>>> sorted(a,key=last_char)
+['aaaa', 'bb', 'd', 'cccz']
+----------------------
+>>> a
+['cccz', 'aaaa', 'd', 'bb']
+>>> ''.join(a)
+'ccczaaaadbb'
+>>> '.'.join(a)
+'cccz.aaaa.d.bb'
+>>> '!='.join(a)
+'cccz!=aaaa!=d!=bb'
+>>> b
+[1, 2]
+>>> ':'.join(b)
+Traceback (most recent call last):
+  File "<pyshell#168>", line 1, in <module>
+    ':'.join(b)
+TypeError: sequence item 0: expected string, int found
+---------------------
+>>> a
+['cccz', 'aaaa', 'd', 'bb']
+>>> b=";".join(a)
+>>> b
+'cccz;aaaa;d;bb'
+>>> b.split(';')
+['cccz', 'aaaa', 'd', 'bb']
+--------------------
+>>> (x, y) = (17, "seventeen")
+>>> x
+17
+>>> y
+'seventeen'
+--------------------
+>>> d={}
+>>> d['a']='alpha'
+>>> d['o']='omega'
+>>> d['g']='gamma'
+>>> d['o']
+'omega'
+>>> d['x']
+
+Traceback (most recent call last):
+  File "<pyshell#194>", line 1, in <module>
+    d['x']
+KeyError: 'x'
+>>> d.get('o')
+'omega'
+>>> d.get('x')
+>>> 
+>>> 'a' in d
+True
+>>> 'x' in d
+False
+>>> 2 in d
+False
+--------------------
+>>> d.items()
+[('a', 'alpha'), ('g', 'gamma'), ('o', 'omega')]
+>>> d.keys()
+['a', 'g', 'o']
+>>> d.values()
+['alpha', 'gamma', 'omega']
+--------------------
+>>> for k in sorted(d.keys()): print 'key:', k, '->', d[k]
+key: a -> alpha
+key: g -> gamma
+key: o -> omega
+>>> for k in sorted(d, reverse=True): print 'key:', k, '->', d[k]
+key: o -> omega
+key: g -> gamma
+key: a -> alpha
+>>> for k in d: print 'key:', k, '->', d[k]
+key: a -> alpha
+key: g -> gamma
+key: o -> omega
+>>> for t in d.items(): print t
+('a', 'alpha')
+('g', 'gamma')
+('o', 'omega')
+--------------------
+>>> import os
+>>> os.getcwd()      # Return the current working directory
+'C:\\Python33'
+>>> os.chdir('/server/accesslogs')   # Change current working directory
+--------------------
+str = 'an example word:cat!!'
+match = re.search(r'word:\w\w\w', str)
+# If-statement after search() tests if it succeeded
+  if match:                      
+    print 'found', match.group() ## 'found word:cat'
+  else:
+    print 'did not find'
+--------------------
+## i+ = one or more i's, as many as possible.
+  match = re.search(r'pi+', 'piiig') =>  found, match.group() == "piii"
+
+  ## Finds the first/leftmost solution, and within it drives the +
+  ## as far as possible (aka 'leftmost and largest').
+  ## In this example, note that it does not get to the second set of i's.
+  match = re.search(r'i+', 'piigiiii') =>  found, match.group() == "ii"
+
+  ## \s* = zero or more whitespace chars
+  ## Here look for 3 digits, possibly separated by whitespace.
+  match = re.search(r'\d\s*\d\s*\d', 'xx1 2   3xx') =>  found, match.group() == "1 2   3"
+  match = re.search(r'\d\s*\d\s*\d', 'xx12  3xx') =>  found, match.group() == "12  3"
+  match = re.search(r'\d\s*\d\s*\d', 'xx123xx') =>  found, match.group() == "123"
+
+  ## ^ = matches the start of string, so this fails:
+  match = re.search(r'^b\w+', 'foobar') =>  not found, match == None
+  match = re.search(r'^f\w+', 'foobar') => foobar
+  ## but without the ^ it succeeds:
+  match = re.search(r'b\w+', 'foobar') =>  found, match.group() == "bar"
+
+  Square brackets can be used to indicate a set of chars, so [abc] matches 'a' or 'b' or 'c'. The codes \w, \s etc. work inside square brackets too with the one exception that dot (.) just means a literal dot.   
+  You can also use a dash to indicate a range, so [a-z] matches all lowercase letters. To use a dash without indicating a range, put the dash last, e.g. [abc-]. An up-hat (^) at the start of a square-bracket set inverts it, so [^ab] means any char except 'a' or 'b'. 
+-------------------
+  
