@@ -41,8 +41,63 @@ def extract_names(filename):
   ['2006', 'Aaliyah 91', Aaron 57', 'Abagail 895', ' ...]
   """
   # +++your code here+++
-  return
+  baby_names={}
+  try:
+    f=open(filename,'r')
+  except:
+    print("Can't open file:", filename)
+    return {}
+    
+  text=f.read()
+  f.close()
+  
+  year=re.findall(r'Popularity in ([\d]{4})', text)
+  year_ranks=re.findall(r'<tr align="right"><td>(\d+)</td><td>(\w+)</td><td>(\w+)</td>', text)
 
+  for rank in year_ranks:
+    baby_names[(int(year[0]), int(rank[0]))]=(rank[1], rank[2])
+  
+  return baby_names
+
+def query(baby_names):
+  """ Queries the baby_names database interactively """
+  while True:
+    response = raw_input("Enter YEAR, RANK('q' to quit): ")
+    if response == 'q': break
+    
+    try:
+      (year, rank)=response.split(',')
+    except:
+      print('Invalid response')
+      continue
+        
+    (year, rank)=(int(year), int(rank))
+    if (year, rank) in baby_names:
+      print(baby_names[(year, rank)])
+    else:
+      print('No Data for year:{year}, rank:{rank}'.format(year=year, rank=rank))
+
+def print_summary(baby_names):
+  """
+  Prints a list of baby names sorted alphabetically follow by it's rank in the year
+  Generate a summary file for each year in the baby_name database
+  """
+  years = []
+  for key in baby_names.keys():
+    if not str(key[0]) in years: years.append(str(key[0]))
+
+  for year in years:
+    list = [year]
+    for key in baby_names.keys():
+      if key[0] == int(year):
+        list.append(baby_names[key][0] + '(Boy): ' + str(key[1]))
+        list.append(baby_names[key][1] + '(Girl): ' + str(key[1]))
+
+    list = sorted(list)
+    text = '\n'.join(list) + '\n'
+    f = open("baby" + year + '.summary', 'w')
+    f.write(text)
+    f.close
 
 def main():
   # This command-line parsing code is provided.
@@ -63,6 +118,14 @@ def main():
   # +++your code here+++
   # For each filename, get the names, then either print the text output
   # or write it to a summary file
+  baby_names={}
+  for filename in args:
+    baby_names.update(extract_names(filename))
+
+  query(baby_names)
+
+  if summary:
+    print_summary(baby_names)
   
 if __name__ == '__main__':
   main()
