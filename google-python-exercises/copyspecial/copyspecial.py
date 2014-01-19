@@ -72,11 +72,6 @@ def main():
     for file in files:
       cmd = cmd + ' ' + file
     print 'Command to run:', cmd 
-##    (status, output) = commands.getstatusoutput(cmd)
-##    if status:
-##      sys.stderr.write(output)
-##      sys.exit(1)
-##    print output
     print subprocess.check_output(cmd, shell=True)
   
 if __name__ == "__main__":
