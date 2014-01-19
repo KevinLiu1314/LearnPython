@@ -10,15 +10,24 @@ import sys
 import re
 import os
 import shutil
-import commands
+import commands  # this is only for unix
+import subprocess
 
 """Copy Special exercise
 """
 
 # +++your code here+++
 # Write functions and modify main() to call them
-
-
+## Example pulls filenames from a dir, prints their relative and absolute paths
+def get_special_paths(dir):
+  files = []
+  for file in os.listdir(dir):
+    if re.search('\w*__\w+__\w*', file):
+      files.append(os.path.abspath(os.path.join(dir, file)))
+##      print file  ## foo.txt
+##      print os.path.join(dir, file) ## dir/foo.txt (relative to current dir)
+##      print os.path.abspath(os.path.join(dir, file)) ## /home/nick/dir/foo.txt
+  return files
 
 def main():
   # This basic command line argument parsing code is provided.
@@ -50,6 +59,25 @@ def main():
 
   # +++your code here+++
   # Call your functions
+  files = get_special_paths(args[0])
+
+  if todir <> '':
+    if not os.path.exists(todir):
+      os.mkdir(todir)
+    for file in files:
+      shutil.copy(file, todir)
+
+  if tozip <> '':
+    cmd = '7z a ' + tozip + '.zip'
+    for file in files:
+      cmd = cmd + ' ' + file
+    print 'Command to run:', cmd 
+##    (status, output) = commands.getstatusoutput(cmd)
+##    if status:
+##      sys.stderr.write(output)
+##      sys.exit(1)
+##    print output
+    print subprocess.check_output(cmd, shell=True)
   
 if __name__ == "__main__":
   main()
