@@ -1,5 +1,4 @@
-print "Let's practice everything."
-print 'You\'d need to know \'bout escapes with \\ that do \n newlines and \t tabs.'
+import urllib2
 
 poem = """
 \tThe lovely world
@@ -34,3 +33,4 @@ start_point = start_point / 10
 
 print "We can also do that this way:"
 print "We'd have %d beans, %d jars, and %d crates." % secret_formula(start_point)
+

@@ -1,0 +1,18 @@
+2/11/2014   Wednesday
+
+>>> x. + TAB   # display methods for object x
+>>> x._ + TAB  # display hidden methods for object x
+>>> x?
+Type:       list
+String Form:[3, 4, 5]
+Length:     3
+Docstring:
+list() -> new empty list
+list(iterable) -> new list initialized from iterable's items
+
+y = !echo "Hello"
+
+y
+Out[13]: ['"Hello"']
+
+
