@@ -1,22 +1,31 @@
-ten_things = "Apples Oranges Crows Telephone Light Sugar"
+from time import time
+t1=time()
+def factors(n):
+   i=1
+   while i*i<=n:
+      if not n%i:
+         yield i
+         yield n//i
+      i+=1
+   if i*i==n:
+      yield i
 
-print "Wait there's not 10 things in that list, let's fix that."
+def isAbundant(n):
+   return sum(set(factors(n)))>2*n
 
-stuff = ten_things.split(' ')
-more_stuff = ["Day", "Night", "Song", "Frisbee", "Corn", "Banana", "Girl", "Boy"]
+b=list()
+for i in xrange(28124):
+   if isAbundant(i):
+      b.append(i)
 
-while len(stuff) != 10:
-    next_one = more_stuff.pop()
-    print "Adding: ", next_one
-    stuff.append(next_one)
-    print "There's %d items now." % len(stuff)
 
-print "There we go: ", stuff
+w=list()
+for i in xrange(len(b)):
+   for j in xrange(i,len(b)):
+      tmp=b[i]+b[j]
+      if tmp>28123:
+         break
+      w.append(tmp)
 
-print "Let's do some things with stuff."
 
-print stuff[1]
-print stuff[-1] # whoa! fancy
-print stuff.pop()
-print ' '.join(stuff) # what? cool!
-print '#'.join(stuff[3:5]) # super stellar!
+print sum(set(range(28123))-set(w)),time()-t1

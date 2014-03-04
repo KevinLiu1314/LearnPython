@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 def mykey(t):
     return t[1], t[0]
 
@@ -20,5 +22,17 @@ d_as_list = sorted(d.items(), key=mykey, reverse=True)
 
 # f.close()
 
+
+
 for c in sorted(d):
     print "%s %d" % (c.encode('utf-8'), d[c])
+
+# # -*- coding: utf-8 -*-
+
+# str = "東海大學 Tunghai University".decode('utf-8')
+
+# f = open("test.txt",'w')
+# f.write("%s" % str.encode('utf-8'))
+# f.close()
+
+# print str
