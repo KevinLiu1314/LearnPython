@@ -62,4 +62,8 @@ for i in range(1, 1001):
 
 print len(oneline.replace(" ", ""))
 
-# Answer: 21124
+# Completed on Sun, 2 Mar 2014, 21:45
+# Solve by: 70549
+# ---------------
+# 21124
+# [Finished in 0.2s]

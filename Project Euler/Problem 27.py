@@ -52,6 +52,9 @@ for a, b in d:
 
 print "Total Time: ", time() - start_time
 
+# Completed on Tue, 4 Mar 2014, 04:52
+# Solve by: 41748
+# ---------------
 # a=-61, b=971, a*b=-59231 -> 71
 # Total Time:  27.5460000038
 # [Finished in 31.6s]

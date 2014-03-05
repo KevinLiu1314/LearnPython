@@ -73,5 +73,8 @@ for i in range(1, 1000000):
 
 print n, max_cs
 
-
-# Answer: 837799, 525
+# Completed on Sun, 2 Mar 2014, 04:51
+# Solve by: 102378
+# ---------------
+# 837799 525
+# [Finished in 49.0s]

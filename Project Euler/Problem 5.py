@@ -43,3 +43,9 @@ for d in range(2, 21):
     sm = sm_temp + pf_of_d
 
 print reduce(lambda x, y: x * y, sm)
+
+# Completed on Sat, 1 Mar 2014, 21:53
+# Solve by: 207961
+# ---------------
+# 232792560
+# [Finished in 0.2s]

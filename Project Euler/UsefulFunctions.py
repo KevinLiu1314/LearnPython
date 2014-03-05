@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 def fibonacci():
     f1 = 1
     yield f1
@@ -52,6 +54,7 @@ def is_prime(n):
 
 
 def triangle_numbers():
+    """Formula Tn = ½n(n+1)"""
     n = 0
     i = 1
     while True:
@@ -83,6 +86,10 @@ def rotations(n):
 def palindromic(s):
     return all([s[i] == s[-(i + 1)] for i in range(len(s) / 2)])
 
+
+def is_pandigital(n):
+    return set(str(i) for i in range(1, len(str(n)) + 1)) == set(str(n))
+
 # Usage Examples
 
 # myf = triangle_numbers()
@@ -100,3 +107,5 @@ def palindromic(s):
 
 # print palindromic("585")
 # print palindromic("1001001001")
+
+# print is_pandigital(7361425)

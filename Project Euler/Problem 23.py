@@ -69,4 +69,9 @@ print sum(na_nums)
 
 print time() - t1
 
-# Answer: 4179871
+# Completed on Mon, 3 Mar 2014, 03:49
+# Solve by: 48221
+# ---------------
+# 4179871
+# 10.0729999542
+# [Finished in 25.3s]

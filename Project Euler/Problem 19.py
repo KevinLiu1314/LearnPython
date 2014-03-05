@@ -91,4 +91,10 @@ while True:
 print year, month, date, day
 print count
 
-# Answer: 171
+# Completed on Mon, 3 Mar 2014, 00:40
+# Solve by: 63862
+# ---------------
+# 1901 1 1 2
+# 2001 1 1 1
+# 171
+# [Finished in 0.3s]

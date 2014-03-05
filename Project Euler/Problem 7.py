@@ -32,3 +32,9 @@ for i in range(10001):
     y = next(p)
 
 print y
+
+# Completed on Sat, 1 Mar 2014, 23:14
+# Solve by: 179409
+# ---------------
+# 104743
+# [Finished in 1.1s]

@@ -49,6 +49,9 @@ print sum(l)
 
 print "Total Time: ", time() - start_time
 
+# Completed on Tue, 4 Mar 2014, 19:29
+# Solve by: 33860
+# ---------------
 # 45228
 # Total Time:  10.254999876
 # [Finished in 10.4s]

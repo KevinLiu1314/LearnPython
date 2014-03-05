@@ -35,3 +35,9 @@ for i in range(len(str) - 5):
     products.append(reduce(lambda x, y: x * y, series))
 
 print max(products)
+
+# Completed on Sat, 1 Mar 2014, 23:35
+# Solve by: 159320
+# ---------------
+# 40824
+# [Finished in 0.2s]

@@ -107,4 +107,8 @@ long_numbers = [int(n) for n in raw_str.split("\n")]
 sum_str = str(sum(long_numbers))
 print sum_str[:10]
 
-# result: 5537376230
+# Completed on Sun, 2 Mar 2014, 04:12
+# Solve by: 104510
+# ---------------
+# 5537376230
+# [Finished in 0.2s]

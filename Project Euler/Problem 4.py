@@ -14,3 +14,9 @@ for n1 in range(100, 1000):
             p.append(n1 * n2)
 
 print max(p)
+
+# Completed on Sat, 1 Mar 2014, 20:12
+# Solve by: 194397
+# ---------------
+# 906609
+# [Finished in 0.6s]

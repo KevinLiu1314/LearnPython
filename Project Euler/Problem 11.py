@@ -61,3 +61,9 @@ for l in range(3, 20):
         products.append(reduce(lambda x, y: x * y, series))
 
 print max(products)
+
+# Completed on Sun, 2 Mar 2014, 01:42
+# Solve by: 108480
+# ---------------
+# 70600674
+# [Finished in 0.2s]

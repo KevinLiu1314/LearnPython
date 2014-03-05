@@ -34,4 +34,8 @@ for a in range(1, 10000):
 
 print sum(anlist)
 
-# Answer: 31626
+# Completed on Mon, 3 Mar 2014, 02:11
+# Solve by: 68676
+# ---------------
+# 31626
+# [Finished in 4.0s]

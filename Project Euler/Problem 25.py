@@ -45,4 +45,8 @@ while True:
         print term
         break
 
-# Answer: 4782
+# Completed on Tue, 4 Mar 2014, 00:53
+# Solve by: 75083
+# ---------------
+# 4782
+# [Finished in 0.4s]

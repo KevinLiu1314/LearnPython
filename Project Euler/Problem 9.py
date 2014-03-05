@@ -21,3 +21,10 @@ a, b, c = find_abc()
 
 print "a=%d, b=%d, c=%d" % (a, b, c)
 print a * b * c
+
+# Completed on Sat, 1 Mar 2014, 23:52
+# Solve by: 157435
+# ---------------
+# a=200, b=375, c=425
+# 31875000
+# [Finished in 6.6s]

@@ -71,4 +71,7 @@ for i in range(1, rows + 1):
 
 print grid[rows]
 
-# Answer: 137846528820L
+# Completed on Mon, 3 Mar 2014, 23:10
+# Solve by: 85222
+# ---------------
+# 137846528820L

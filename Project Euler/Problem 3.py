@@ -21,3 +21,9 @@ def lpf(n):
     return divisor_so_far
 
 print lpf(600851475143)
+
+# Completed on Sat, 1 Mar 2014, 19:47
+# Solve by: 213234
+# ---------------
+# 6857
+# [Finished in 0.2s]

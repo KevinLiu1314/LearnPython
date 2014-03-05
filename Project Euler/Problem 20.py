@@ -14,4 +14,8 @@ f = math.factorial(100)
 f_digits = map(lambda x: int(x), list(str(f)))
 print sum(f_digits)
 
-# Answer: 648
+# Completed on Mon, 3 Mar 2014, 01:49
+# Solve by: 98269
+# ---------------
+# 648
+# [Finished in 0.2s]

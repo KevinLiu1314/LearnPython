@@ -73,4 +73,8 @@ while True:
 
     i += 1
 
-# Answer: 76576500
+# Completed on Sun, 2 Mar 2014, 03:38
+# Solve by: 97926
+# ---------------
+# 76576500
+# [Finished in 26.7s]

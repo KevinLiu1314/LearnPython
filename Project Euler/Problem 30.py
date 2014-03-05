@@ -35,11 +35,6 @@ print sum(l)
 
 print "Total Time: ", time() - start_time
 
-# [4150, 4151, 54748, 92727, 93084, 194979]
-# 443839
-# Total Time:  6.39100003242
-# [Finished in 6.6s]
-
 # Other answers
 # b=[]
 # for a in range(2,1000000):
@@ -47,3 +42,12 @@ print "Total Time: ", time() - start_time
 #         b.append(a)
 # print b
 # print sum(b)
+
+
+# Completed on Tue, 4 Mar 2014, 15:16
+# Solve by: 53283
+# ---------------
+# [4150, 4151, 54748, 92727, 93084, 194979]
+# 443839
+# Total Time:  6.39100003242
+# [Finished in 6.6s]

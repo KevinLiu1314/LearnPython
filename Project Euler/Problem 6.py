@@ -17,3 +17,9 @@ sum_of_square = sum(i ** 2 for i in range(1, 101))
 square_of_sum = sum(i for i in range(1, 101)) ** 2
 
 print square_of_sum - sum_of_square
+
+# Completed on Sat, 1 Mar 2014, 22:36
+# Solve by: 209539
+# ---------------
+# 25164150
+# [Finished in 0.2s]

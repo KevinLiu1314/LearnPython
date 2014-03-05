@@ -26,5 +26,8 @@ while i <= 1000000:
 
 print reduce(lambda x, y: str(x) + str(y), number)
 
+# Completed on Tue, 4 Mar 2014, 18:44
+# Solve by: 55624
+# ---------------
 # 2783915460
 # [Finished in 0.6s]

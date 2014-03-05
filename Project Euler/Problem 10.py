@@ -41,3 +41,9 @@ while next_p < 2000000:
     next_p = next(p)
 
 print sum
+
+# Completed on Sun, 2 Mar 2014, 00:00
+# Solve by: 144048
+# ---------------
+# 142913828922
+# [Finished in 14.2s]

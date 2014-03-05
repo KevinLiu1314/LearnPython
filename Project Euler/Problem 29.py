@@ -33,6 +33,9 @@ print len(set(powers))
 
 print "Total Time: ", time() - start_time
 
+# Completed on Tue, 4 Mar 2014, 14:47
+# Solve by: 50066
+# ---------------
 # 9183
 # Total Time:  0.0240001678467
 # [Finished in 0.2s]

@@ -24,4 +24,11 @@ print scores[937]
 
 print sum(scores)
 
-# Answer: 871198282
+# Completed on Mon, 3 Mar 2014, 02:33
+# Solve by: 64123
+# ---------------
+# 937
+# 53
+# 49714
+# 871198282
+# [Finished in 1.0s]

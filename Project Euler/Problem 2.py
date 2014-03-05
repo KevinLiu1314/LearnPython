@@ -32,4 +32,9 @@ l = [i for i in f(4000000)]
 l = filter(lambda x: x % 2 == 0, l)
 print sum(l)
 
-# Answer: 4613732
+# Completed on Sat, 1 Mar 2014, 19:29
+# Solve by: 291879
+# ---------------
+# 4613732
+# 4613732
+# [Finished in 0.2s]

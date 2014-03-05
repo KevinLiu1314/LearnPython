@@ -43,6 +43,9 @@ print ways
 
 print "Total Time: ", time() - start_time
 
+# Completed on Tue, 4 Mar 2014, 16:11
+# Solve by: 39270
+# ---------------
 # 73682
 # Total Time:  3.59500002861
 # [Finished in 3.8s]

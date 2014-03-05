@@ -51,6 +51,9 @@ print sum(l)
 
 print "Total Time: ", time() - start_time
 
+# Completed on Tue, 4 Mar 2014, 21:54
+# Solve by: 35992
+# ---------------
 # [23, 37, 53, 73, 313, 317, 373, 797, 3137, 3797, 739397]
 # 748317
 # Total Time:  2.70900011063

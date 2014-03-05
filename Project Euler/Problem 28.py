@@ -68,6 +68,9 @@ print sum
 
 print "Total Time: ", time() - start_time
 
+# Completed on Tue, 4 Mar 2014, 06:00
+# Solve by: 55655
+# ---------------
 # 669171001
 # Total Time:  0.664999961853
 # [Finished in 0.9s]

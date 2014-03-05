@@ -12,3 +12,10 @@ print "Sum is: ", sum(l)
 l = reduce(lambda x, y: x + y, l)
 
 print l
+
+# Completed on Sat, 1 Mar 2014, 18:34
+# Solve by: 353082
+# ---------------
+# Sum is:  233168
+# 233168
+# [Finished in 0.1s]

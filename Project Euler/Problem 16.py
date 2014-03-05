@@ -8,4 +8,8 @@
 n = map(lambda x: int(x), list(str(2 ** 1000)))
 print sum(n)
 
-# answer: 1366
+# Completed on Sun, 2 Mar 2014, 05:45
+# Solve by: 107260
+# ---------------
+# 1366
+# [Finished in 0.1s]
