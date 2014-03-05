@@ -90,6 +90,34 @@ def palindromic(s):
 def is_pandigital(n):
     return set(str(i) for i in range(1, len(str(n)) + 1)) == set(str(n))
 
+
+# Triangle number generator
+# Tn=n(n+1)/2         1, 3, 6, 10, 15, ...
+def triangle_num_gen():
+    n = 1
+    while True:
+        yield n * (n + 1) / 2
+        n += 1
+
+
+# Pentagonal number generator
+# Pn=n(3n−1)/2        1, 5, 12, 22, 35, ...
+def pentagonal_num_gen():
+    n = 1
+    while True:
+        yield n * (3 * n - 1) / 2
+        n += 1
+
+
+# Hexagonal number generator
+# Hn=n(2n−1)      1, 6, 15, 28, 45, ...
+def hexagonal_num_gen():
+    n = 1
+    while True:
+        yield n * (2 * n - 1)
+        n += 1
+
+
 # Usage Examples
 
 # myf = triangle_numbers()
