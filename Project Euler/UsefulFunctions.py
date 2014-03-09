@@ -83,7 +83,7 @@ def rotations(n):
         yield n
 
 
-def palindromic(s):
+def is_palindromic(s):
     return all([s[i] == s[-(i + 1)] for i in range(len(s) / 2)])
 
 
@@ -136,4 +136,4 @@ def hexagonal_num_gen():
 # print palindromic("585")
 # print palindromic("1001001001")
 
-# print is_pandigital(7361425)
+# print is_pandigital(221)

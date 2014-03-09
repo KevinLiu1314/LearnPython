@@ -18,22 +18,30 @@ d = {i: math.factorial(i) for i in range(10)}
 
 l = []
 n = 10
-while True:
+while n < 2000000:      # just guessing the UB
     digits = [int(x) for x in str(n)]
-    sum = 0
+    sum_ = 0
     for digit in digits:
-        sum += d[digit]
+        sum_ += d[digit]
 
-    if sum == n:
+    if sum_ == n:
         l.append(n)
 
     n += 1
 
-    print n
+    # print n
 
-    if len(l) == 1: break
+    # if len(l) == 1: break
 
 print l
+print sum(l)
 
 print "Total Time: ", time() - start_time
 
+# Completed on Sat, 8 Mar 2014, 20:31
+# Solve by: 46682
+# ---------------
+# [145, 40585]
+# 40730
+# Total Time:  12.4330000877
+# [Finished in 12.6s]
