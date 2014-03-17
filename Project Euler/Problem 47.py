@@ -59,7 +59,7 @@ h4dpf3 = has_four_dpf(3)
 h4dpf4 = has_four_dpf(4)
 i = 4
 while True:
-    if h4dpf1 == h4dpf2 == h4dpf3 == h4dpf4 == True:
+    if all((h4dpf1, h4dpf2, h4dpf3, h4dpf4)):
         print h4dpf1, h4dpf2, h4dpf3, h4dpf4
         print i - 3     # this is the 4th one, we need the first number
         break
