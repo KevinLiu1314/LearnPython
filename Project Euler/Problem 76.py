@@ -28,8 +28,8 @@ def combinations(number, target):
     sum_so_far = sum(numbers)
     difference = target - sum_so_far
     while True:
-        if difference >= numbers[index]:
-            count += (difference - numbers[index]) / 2 + 1
+        if difference >= numbers[-1]:
+            count += (difference - numbers[-1]) / 2 + 1
 
         index -= 1
         if index < 0:
