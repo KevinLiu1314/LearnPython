@@ -35,6 +35,3 @@ print "Total Time: ", time() - start_time
 # Completed on Wed, 26 Mar 2014, 01:42
 # Solve by: 1386
 # ---------------
-# Answer: 11109800204052
-# Total Time:  108.404000044
-# [Finished in 114.3s]
