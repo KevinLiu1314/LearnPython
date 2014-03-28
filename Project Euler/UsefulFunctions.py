@@ -137,14 +137,30 @@ def pentagonal_num_gen():
         n += 1
 
 
-# Hexagonal number generator
-# Hn=n(2n−1)      1, 6, 15, 28, 45, ...
 def hexagonal_num_gen():
+    """
+    Hexagonal number generator
+    # Hn=n(2n−1)      1, 6, 15, 28, 45, ...
+    """
     n = 1
     while True:
         yield n * (2 * n - 1)
         n += 1
 
+
+def is_terminal(n, d):
+    """
+    return True if n/d is terminal, False Otherwise
+    """
+    seen_before =[]
+    remainder = n % d
+    while not remainder in seen_before:
+        if remainder == 0:
+            return True
+        seen_before.append(remainder)
+        remainder = remainder * 10 % d
+
+    return False
 
 # Usage Examples
 
@@ -167,3 +183,5 @@ def hexagonal_num_gen():
 # print is_pandigital(221)
 
 # print sieve(97)
+
+# print is_terminal(10, 16)
