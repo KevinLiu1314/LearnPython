@@ -66,19 +66,13 @@ def sieve(N):
     """
     numbers = [1 for i in xrange(N + 1)]
     p = 2
-    while p < N:
+    while p <= N:
         if numbers[p] == 1:     # a new prime number
+            yield p
             for j in range(p, N + 1, p):
                 numbers[j] = 0  # a multiple of p, not a prime
             numbers[p] = 1      # save our prime
         p += 1
-
-    primes = []
-    for i in xrange(2, N + 1):
-        if numbers[i] == 1:
-            primes.append(i)
-
-    return primes
 
 
 def triangle_numbers():
@@ -162,6 +156,26 @@ def is_terminal(n, d):
 
     return False
 
+
+def baseconvert(n, base):
+    """
+    convert positive decimal integer n to equivalent in another base (2-36)
+    """
+    digits = "0123456789abcdefghijklmnopqrstuvwxyz"
+
+    if n < 0 or base < 2 or base > 36:
+        return ""
+
+    s = ""
+    while True:
+        r = n % base
+        s = digits[r] + s
+        n = n / base
+        if n == 0:
+            break
+
+    return s
+
 # Usage Examples
 
 # myf = triangle_numbers()
@@ -185,3 +199,5 @@ def is_terminal(n, d):
 # print sieve(97)
 
 # print is_terminal(10, 16)
+
+# print baseconvert(8992, 7)

@@ -21,27 +21,40 @@
 # NOTE: The first two examples in the file represent the triangles in the
 # example given above.
 
+# 1. test to see if the area of ABC is equal to the area of the triangles
+# 2. ABP + APC + PBC
+# 3. http://en.wikipedia.org/wiki/Triangle#Using_coordinates gives the formula:
+# 4. Area = 1/2|(Ax - Cx)(By - Ay) - (Ax - Bx)(Cy - Ay)|
+
 from time import time
+
+
+def area(A, B, C):
+    """
+    return double area of triangle ABC
+    """
+
+    return abs((A[0] - C[0]) * (B[1] - A[1]) - (A[0] - B[0]) * (C[1] - A[1]))
 
 start_time = time()
 
-def is_contain(x1, y1, x2, y2, x3, y3):
-    allx = [x1, x2, x3]
-    ally = [y1, y2, y3]
-    x_all_negative = all(map(lambda x: x < 0, allx))
-    x_all_positive = all(map(lambda x: x > 0, allx))
-    y_all_negative = all(map(lambda y: y < 0, ally))
-    y_all_positive = all(map(lambda y: y > 0, ally))
-    
-    if x_all_negative or x_all_positive:
-        return False
-    if y_all_negative or y_all_positive:
-        return False
+count = 0
+P = (0, 0)
+for line in open("Problem 102.txt"):
+    coordinates = map(int, line.strip().split(","))
+    A = (coordinates[0], coordinates[1])
+    B = (coordinates[2], coordinates[3])
+    C = (coordinates[4], coordinates[5])
+    if area(A, B, C) == area(A, B, P) + area(A, P, C) + area(P, B, C):
+        count += 1
 
-    return True
-    
+print "Answer:", count
+
 print "Total Time: ", time() - start_time
 
-# Completed on Thu, 6 Mar 2014, 00:49
-# Solve by:  25508
+# Completed on Tue, 1 Apr 2014, 02:14
+# Solve by: 11395
 # ---------------
+# Answer: 228
+# Total Time:  0.0090000629425
+# [Finished in 0.2s]
