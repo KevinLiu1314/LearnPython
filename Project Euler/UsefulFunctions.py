@@ -176,6 +176,23 @@ def baseconvert(n, base):
 
     return s
 
+from fractions import Fraction as F
+def convergent(terms):
+    """
+    return the convergent of the continue fraction expansion
+    """
+    i = len(terms) - 1           # expand from last term
+    if i == 0:
+        return F(terms[0], 1)
+
+    f = F(1, terms[i])
+    while i != 1:
+        i -= 1
+        f = F(terms[i], 1) + f
+        f = F(f.denominator, f.numerator)
+
+    return F(terms[0], 1) + f
+
 # Usage Examples
 
 # myf = triangle_numbers()
