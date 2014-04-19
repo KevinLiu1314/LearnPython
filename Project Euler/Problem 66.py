@@ -26,6 +26,8 @@
 # Find the value of D ≤ 1000 in minimal solutions of x for which the largest
 # value of x is obtained.
 
+# 1. http://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Pell.27s_equation
+
 from time import time
 import math
 from fractions import Fraction as F
