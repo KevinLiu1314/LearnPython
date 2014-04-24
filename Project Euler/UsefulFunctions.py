@@ -193,6 +193,24 @@ def convergent(terms):
 
     return F(terms[0], 1) + f
 
+
+def is_permutation(m, n):
+    """
+    check to see if m & n are permutations of each other
+    checking to see if the frequency of the digits 0-9 are the same
+    """
+    l = [0] * 10
+    while m > 0:
+        l[m % 10] += 1
+        m /= 10
+    while n > 0:
+        l[n % 10] -= 1
+        n /= 10
+    for i in l:
+        if i != 0:
+            return False
+    return True
+
 # Usage Examples
 
 # myf = triangle_numbers()
@@ -218,3 +236,5 @@ def convergent(terms):
 # print is_terminal(10, 16)
 
 # print baseconvert(8992, 7)
+
+# print is_permutation(9997619, 9991796)

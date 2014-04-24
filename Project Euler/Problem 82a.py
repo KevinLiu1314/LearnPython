@@ -42,7 +42,7 @@ for j in xrange(grid_size-2, -1, -1):
     for i in xrange(grid_size-2, -1, -1):
         running_min[i] = min(running_min[i+1] + grid[i][j], running_min[i] + grid[i][j])
 
-    # checking download
+    # checking downward
     for i in xrange(1, grid_size):
         running_min[i] = min(running_min[i], running_min[i-1] + grid[i][j])
 
