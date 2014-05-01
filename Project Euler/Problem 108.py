@@ -49,9 +49,9 @@ def factors_of_n_squared(n):
     number_of_factors = 1
     r = n
     while r != 1:
-        exponents = 0
         if primes[i] ** 2 > n:
             break
+        exponents = 0
         while r % primes[i] == 0:
             exponents += 1
             r /= primes[i]
