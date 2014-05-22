@@ -14,24 +14,23 @@
 
 def f(n):
     m = 1
+    #if n == 9999: return 11112222222222222222 # by 9, 99, 999 pattern
     while True:
-        if set(str(m * n)) <= {'0', '1', '2'}:
-            return m
-        m += 1
+        s = str(m * n)
+        for idx in range(len(s)):
+            if s[idx] not in ('0', '1', '2'): break
+        else:
+            return n * m
+        mininc = 10**(len(s) - idx) - int(s[idx:])
+        m += (mininc - 1)//n + 1
 
-from time import time
+s = 0
+for n in range(1, 10001): s += f(n) // n
+print(s)
 
-start_time = time()
-
-N = 10000
-sum_ = 0
-for i in range(1, N + 1):
-    sum_ += f(i)
-
-print "Answer:", sum_
-
-print "Total Time: ", time() - start_time
-
-# Completed on Wed, 26 Mar 2014, 01:42
-# Solve by: 1386
+# Not solved
+# Completed on Fri, 16 May 2014, 21:54
+# Solve by: 1999
 # ---------------
+# 1111981904675169
+# [Finished in 129.7s]
