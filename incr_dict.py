@@ -6,11 +6,14 @@ def incr_dict(d, t):
 			if type(d[t[0]]) is int:
 				d[t[0]] += 1
 			else:
-				d[t[0]] = 1
+				#d[t[0]] = 1
+				return d
 	else:
 		if not t[0] in d:
 			d[t[0]] = incr_dict({}, t[1:])
 		else:
+			if type(d[t[0]]) is int:
+				return d
 			d[t[0]] = incr_dict(d[t[0]], t[1:])
 
 	return d
@@ -32,11 +35,15 @@ incr_dict(dct, ('a', 'r', 'f'))
 print dct
 incr_dict(dct, ('a', 'b', 'c'))
 print dct
-incr_dict(dct, ('a', 'b', 'e', 'b', 'c', 'b', 'c', 'b', 'c', 'b', 'c', 'b', 'c', 'b', 'c', 'b', 'c', 'b', 'c'))
+print
+incr_dict(dct, ('a', 'b', 'c', 'b', 'c', 'b', 'c', 'b', 'c', 'b', 'c', 'b', 'c', 'b', 'c', 'b', 'c', 'b', 'c'))
 print dct
 incr_dict(dct, ('a', 'b', 'e'))
 print dct
 incr_dict(dct, ('a', 'b', 'e'))
+print dct
+print
+incr_dict(dct, ('a', 'b'))
 print dct
 
 
