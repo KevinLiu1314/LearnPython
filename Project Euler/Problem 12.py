@@ -67,7 +67,7 @@ while True:
     if d == math.sqrt(n):   # in cases like 36 [1, 2, 3, 4, 6, 9, 12, 18, 36]
         f += 1
 
-    if f >= 500:
+    if f >= 600:
         print n
         break
 

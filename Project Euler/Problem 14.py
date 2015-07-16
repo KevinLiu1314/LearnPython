@@ -38,7 +38,7 @@ def cs(n):
 # Method 1 - took 43 seconds,
 n = 1
 max_cs = 0
-for i in range(1, 1000000):
+for i in range(1, 1000):
     cs_for_i = cs(i)
     if cs_for_i > max_cs:
         n = i

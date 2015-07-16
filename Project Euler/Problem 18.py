@@ -47,12 +47,15 @@ start_time = time()
 
 # Save the triangle into a 15 X 15 grid
 triangle = map(int, open("problem 18.txt").read().split())
-grid = [[] * 15 for i in xrange(15)]
+grid = [[] for i in xrange(15)]
+
 i = 0       # index into the numbers in triangle
 for j in xrange(15):
     for k in xrange(j + 1):
         grid[j].append(triangle[i])
         i += 1
+
+print grid
 
 # Initial & expand the nodes
 nodes = [(grid[0][0], 0, 0)]

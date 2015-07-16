@@ -28,7 +28,7 @@ def prime():
 
 p = prime()
 
-for i in range(10001):
+for i in range(100001):
     y = next(p)
 
 print y

@@ -5,9 +5,9 @@
 
 # What is the sum of the digits of the number 2^1000?
 
-n = map(lambda x: int(x), list(str(2 ** 1000)))
+n = map(lambda x: int(x), list(str(2 ** 100)))
 print sum(n)
-
+print len(str(2 ** 1000))
 # Completed on Sun, 2 Mar 2014, 05:45
 # Solve by: 107260
 # ---------------
